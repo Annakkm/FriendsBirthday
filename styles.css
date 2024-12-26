@@ -26,44 +26,22 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; /* Використовуємо вертикальне розташування */
-}
-
-.photo-section {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; /* Використовуємо вертикальне розташування */
+    flex-direction: column;
 }
 
 .photo-frame {
-    width: 100%; 
-    max-width: 300px; /* Максимальна ширина фото */
-    height: auto; 
-    border: 5px solid #ff69b4; 
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border: 5px solid #ff69b4;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.photo-container {
-    text-align: center; /* Центруємо текст */
-    max-width: 100%; /* Не дозволяємо контейнеру розширюватися більше 100% ширини */
-}
-
-.photo-text-container {
-    margin-top: 10px; /* Додаємо відступ між фото та текстом */
-}
-
 .photo-frame img {
-    width: 100%;  /* Фото заповнює контейнер */
-    height: auto; /* Пропорції фото залишаються незмінними */
-    object-fit: cover; /* Обрізає зайве, якщо потрібно */
-}
-.photo {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
 }
 
@@ -71,32 +49,16 @@ body {
     transform: scale(1.05);
 }
 
-
-
-.text-section {
-    flex: 2;
-    padding: 20px;
-    text-align: left;
-}
-
-.text-section h1 {
-    font-size: 2rem;
-    color: #ff1493;
-}
-
-.text-section p {
-    font-size: 1.2rem;
-    margin: 10px 0;
+.photo-text-container {
+    margin-top: 10px;
 }
 
 .center-content {
     text-align: center;
-    width: 50%; /* Центральний блок займатиме 50% ширини */
-}
-
-.photo-left, .photo-right {
-    width: 20%; /* Лівий та правий блоки займуть по 20% ширини */
-    text-align: center;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 button {
@@ -114,21 +76,17 @@ button:hover {
     background-color: #ff1493;
 }
 
-.hidden {
-    display: none;
-}
-
 #surpriseContent {
     margin-top: 20px;
+    padding: 10px;
+    text-align: center;
 }
 
-.photo-container {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 100%;
-    height: 250px;
+.qr_img {
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 canvas {
@@ -138,33 +96,6 @@ canvas {
     z-index: -1;
 }
 
-.photo-left p {
-    position: absolute; /* Розміщуємо текст абсолютно */
-    top: 10px; /* Текст буде трохи вище */
-    left: 50%;
-    transform: translateX(-50%);
-    color: #fff;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-/* Корекція позицій фото ліворуч */
-.photo-left {
-    position: relative;
-    width: 150px;
-    height: 200px;
-    margin: 20px;
-    text-align: center;
-}
-
-img {
-    display: block; /* Прибирає нижній просвіт, характерний для inline-зображень */
-    margin: 0;      /* Забезпечує відсутність зовнішніх відступів */
-    padding: 0;     /* Забезпечує відсутність внутрішніх відступів */
-}
-
-.container {
-    padding: 0; /* Відсутність внутрішніх відступів */
-    margin: 0;  /* Відсутність зовнішніх відступів */
-    overflow: hidden; /* Якщо є невеликі дефекти, це може допомогти */
+.hidden {
+    display: none !important;
 }
