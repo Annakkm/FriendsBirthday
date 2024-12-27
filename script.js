@@ -95,6 +95,12 @@ surpriseButton.addEventListener("click", function () {
     }
 });
 
+
+birthdaySong.addEventListener("ended", function () {
+    birthdaySong.currentTime = 0; 
+    birthdaySong.play(); 
+});
+
 const particles = [];
 
 function random(min, max) {
